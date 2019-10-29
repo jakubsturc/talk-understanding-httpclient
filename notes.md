@@ -1,15 +1,5 @@
 # Notes
 
-## Todo
-
-* Change user agent
-* Enable compression.
-* using with ASP.NET Core
-  * IHttpClientFactory 
-* cancelation
-* ignore certificates
-* dispose
-
 
 ## Resources
 

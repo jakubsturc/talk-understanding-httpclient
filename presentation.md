@@ -19,3 +19,31 @@ _by Jakub Šturc_
 
 ---
 
+## Demo
+
+---
+
+## Summary
+
+* be aware how many HttpClient you are creating
+* consider lifetime ouf your HttpClients
+* do not dispose, unless you know what you are doing
+
+---
+
+## Questions
+
+--
+
+### Should we dispose HttpClient?
+
+* no, when using HttpClientFactory
+* it depends no otherwise, but generally no
+
+---
+
+## Read more
+
+* [Steve Gordon blog](https://www.stevejgordon.co.uk/tag/httpclient)
+
+
