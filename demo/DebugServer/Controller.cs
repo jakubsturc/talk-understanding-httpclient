@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -75,6 +76,12 @@ namespace JakubSturc.Demo.UnderstandingHttpClient.DebugServer
                 Response.Cookies.Append("test", "*");
                 return "Cookies was created";
             }
+        }
+
+        [HttpGet("debug")]
+        public string Debug()
+        {
+            return string.Join(Environment.NewLine, Request.Headers.Select(h => $"{h.Key}: {h.Value}"));
         }
     }
 }
