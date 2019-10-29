@@ -1,20 +1,14 @@
 # Notes
 
-## Talking points
+## Todo
 
 * Change user agent
-* Enable compression
-* Perform post request
-  * FormUrlEncodedContent
-  * StringContent
-  * json, file, ...
-* IHttpClientFactory
+* Enable compression.
 * using with ASP.NET Core
-* using synchronously
+  * IHttpClientFactory 
 * cancelation
-* working with redirects
+* ignore certificates
 * dispose
-* HttpCompletionOption.ResponseHeadersRead 
 
 
 ## Resources
