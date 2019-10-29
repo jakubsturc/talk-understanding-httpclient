@@ -8,6 +8,7 @@ namespace JakubSturc.Demo.UnderstandingHttpClient.ConsoleApp
         {
             // await HelloWorld.Simple();
             // await PerformPostRequest.Form();
+            await HandleDownload.LargeFile();
             // await Redirect.DisableAutoRedirect();
             // await Cookies.Read();
         }

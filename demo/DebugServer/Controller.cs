@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -17,6 +18,15 @@ namespace JakubSturc.Demo.UnderstandingHttpClient.DebugServer
         {
             await Task.Delay(delay);
             return "Hello World";
+        }
+
+        [HttpGet("download")]
+        public IActionResult Download()
+        {
+            var loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+            var bytes = Encoding.ASCII.GetBytes(loremIpsum);
+            var memory = new MemoryStream(bytes);
+            return File(memory, contentType: "text/plain", fileDownloadName: "lorem.txt");
         }
 
         [HttpGet("302")]
